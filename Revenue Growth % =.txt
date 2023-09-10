@@ -1,0 +1,52 @@
+Revenue Growth % = 
+VAR Revenue2019 = CALCULATE(SUM(Fact_Stamps[documents_registered_rev]), Dim_Date[fiscal_year] = 2019)
+VAR Revenue2022 = CALCULATE(SUM(Fact_Stamps[documents_registered_rev]), Dim_Date[fiscal_year] = 2021)
+RETURN
+DIVIDE(Revenue2021 - Revenue2019, Revenue2019, 0) * 100
+
+
+Revenue Difference = [Total E-Stamps Revenue] - [Total Document Revenue]
+E-Stamps Contribution % = DIVIDE([Total E-Stamps Revenue], [Total E-Stamps Revenue] + [Total Document Revenue], 0)
+Significantly More Flag = IF([E-Stamps Contribution %] > 0.6, 1, 0)
+Top 5 E-Stamps Districts = 
+TOPN(5, 
+    FILTER('fact_Stamps', 'fact_Stamps'[FiscalYear] = 2022 && 'fact_Stamps'[Significantly More Flag] = 1), 
+    [E-Stamps Contribution %], DESC
+)
+This process assumes that you have a 'fact_Stamps' table with columns like 'doument_resistered_rev', 'estamps_challen_rev', 'FiscalYear', and 'Significantly More Flag'. You may need to adjust column names and table names based on your actual data model.
+
+The above steps will help you compare the revenue generated from document registration to the revenue generated from e-stamp challans across districts and identify the top 5 districts where e-stamps revenue contributes significantly more to the revenue than document registration in FY 2022. Adjust the percentage threshold in the "Significantly More Flag" calculation according to your business requirements.
+
+
+
+
+User
+
+2 / 2
+
+User
+in power bi dax forumala
+
+
+asume i have table like fact_Stamps in conteind column doument_registerd_cnt , doument_resistered_rev,estamps_challans_cnt,estamps_challen_rev,
+estamps_challen_rev column is it 0 value how find the estamps_challen_rev in dax formula
+
+
+
+ChatGPT
+If you want to handle cases where the 'estamps_challen_rev' column has a value of 0 in Power BI using DAX formulas, you can use the following approach:
+
+Create a new calculated column that replaces 0 values in the 'estamps_challen_rev' column with a null or blank value.
+dax
+Copy code
+Adjusted E-Stamps Revenue = IF('fact_Stamps'[estamps_challen_rev] = 0, BLANK(), 'fact_Stamps'[estamps_challen_rev])
+Now, you can use the 'Adjusted E-Stamps Revenue' column in your calculations. For example, if you want to calculate the total e-stamps revenue without considering the 0 values:
+dax
+Copy code
+Total Adjusted E-Stamps Revenue = SUM('fact_Stamps'[Adjusted E-Stamps Revenue])
+This way, you can handle the 0 values in the 'estamps_challen_rev' column by replacing them with BLANK() and then use the adjusted column in your calculations.
+
+
+
+
+
