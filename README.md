@@ -1,6 +1,10 @@
 # Telangana-Growth-Analysis-Report
 
-# Probleam Statment
+# About Telangana 
+
+Telangana (తెలంగాణా) is a state in southern India. It became the 29th state of India on 2nd June, 2014. Before that, it was part of Andhra Pradesh. It has a population of 39.12 million as per the 2017 census. Its capital is Hyderabad (Bagyanagar), being the largest city of Telangana. Hyderabad was built by Quli Qutub Shah 400 years back on the banks of river Musi, with the Charminar at its centre. The rivers flowing through the state are Krishna, Godavari, Bhima, Manjira, Musi and Paleru. Telangana is a land locked state with Maharashtra, Karnataka, Chhattisgarh, and Andhra Pradesh as its border states. K. Chandrashekar Rao is the first and current Chief Minister of the state from the Bharat Rashtra Samithi (BRS). According to the data released by the Comptroller and Auditor-General of India in 2018, Telegana stands first in the states with respect to the average growth rate of its own tax revenue. It has achieved an average growth rate of 13.8% during the last 4 years.[1] It has 17 Lok Sabha seats and 119 assembly seat.
+
+# Problem Statement
 
 
 Telangana is one of the fastest-growing states in India and one of the states with an open data policy. (They have published all their data online)
@@ -37,6 +41,9 @@ I'm thrilled to present the results of our recent Telangana Growth Analysis proj
 Feel free to adapt and use this post for your LinkedIn network to share the exciting insights from your Telangana Growth Analysis project!
 
 # Live Dashboard Link: https://www.novypro.com/project/telangana-growth-analysis-report
+
+![image](https://github.com/praveenmvishwa/Telangana-Growth-Analysis-Report/assets/97948603/7f3bed2d-ea2b-4e13-ae13-897b2e518001)
+
 
 
 
@@ -79,6 +86,8 @@ Justification: This district has shown considerable growth in  recent years, par
 
 
 ![image](https://github.com/praveenmvishwa/Telangana-Growth-Analysis-Report/assets/97948603/54047cf5-789d-4e1c-ac51-a067937c2cf4)
+
+
 
 
 
